@@ -1,0 +1,156 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: #1c1c1c;
+    color: #e0e0e0;
+    padding: 20px;
+    box-sizing: border-box;
+    background-image: url('https://img.freepik.com/fotos-premium/calendario-vacaciones-empleados-empresa_1048944-13472486.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+#contenedor-principal {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#meses {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+#todo {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#botones {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#botones button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #74605a;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#botones button:hover {
+    background-color: #36150b;
+    transform: scale(1.1);
+}
+
+#registro {
+    display: flex;
+    flex-direction: column;
+}
+
+#registro label {
+    margin-top: 10px;
+}
+
+#registro input, #registro textarea, #registro select, #registro button {
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #616161;
+    background-color: #424242;
+    color: #e0e0e0;
+    transition: border-color 0.3s ease;
+}
+
+#registro input:focus, #registro textarea:focus, #registro select:focus {
+    border-color: #ff5722;
+    outline: none;
+}
+
+#registro button {
+    margin-top: 20px;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#registro button:hover {
+    background-color: #e64a19;
+}
+
+.calendario-vista {
+    display: none;
+    width: 100%;
+}
+
+#Anual {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+#mensual {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 20px;
+}
+
+#diario {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+#Anual .mes, #mensual div, #diario div {
+    background-color: #424242;
+    padding: 20px;
+    border: 1px solid #616161;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#mensual div.con-evento, #diario div.con-evento {
+    background-color: #ffab40;
+}
+
+#agrupar {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2c2c2c;
+    padding: 20px;
+    border: 1px solid #616161;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: #e0e0e0;
+}
+
+
+
+#Anual .mes:hover, #mensual div:hover, #diario div:hover {
+    background-color: #616161;
+    transform: translateY(-5px);
+}

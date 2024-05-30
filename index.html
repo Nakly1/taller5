@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calendario</title>
+    <link rel="stylesheet" href="./css/confi.css">
+    <script src="./js/confi.js"></script>
+</head>
+<body>
+    <div id="botones">
+        <button id="vista-anual">Mostrar anual</button>
+        <button id="vista-mensual">Mostrar mensual</button>
+        <button id="vista-diaria">Mostrar diario</button>
+    </div>
+    <div id="calendar"> 
+        <div id="Anual" class="calendario-vista"></div>  
+        <div id="mensual" class="calendario-vista">
+            <div id="mes-actual"></div> 
+            <button id="antes">atras</button>
+            <button id="siguiente">siguiente</button>
+        </div>
+        <div id="diario" class="calendario-vista"></div>
+    </div>
+
+    <div id="agrupar">
+        <form id="registro">
+            <h2 id="titulo-formulario">Crea tu evento</h2>
+            <label for="name">titulo</label>
+            <input type="text" id="name" name="title" required>
+            <label for="fecha-evento">fecha</label>
+            <input type="date" id="fecha-evento" name="date" required>
+            <label for="tiempo">hora:</label>
+            <select id="tiempo" name="time" required>
+            </select>
+            <label for="notas">descripcion</label>
+            <textarea id="notas" name="description" required></textarea>
+            <label for="integrantes">nombre participantes</label>
+            <input type="text" id="integrantes" name="participants" required>
+            <button type="submit">guardar</button>
+            <button type="button" id="cancel">cancelar</button>
+            <button type="button" id="borrar" style="display: none;">borrar</button>
+        </form>
+    </div>
+</body>
+</html>
